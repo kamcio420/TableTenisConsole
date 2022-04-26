@@ -1,8 +1,17 @@
 ﻿#include <iostream>
 
+using namespace std;
+
+class Ball
+{
+private:
+    int x, y;
+    int orgX, orgY;
+};
+
 int main()
 {
-    std::cout << "Hello World!\n";
+    cout << "Hello World!\n";
 }
 
 
