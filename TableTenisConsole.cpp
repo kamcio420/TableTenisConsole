@@ -1,5 +1,7 @@
 ﻿#include <iostream>
 #include <windows.h>
+#include "map.h"
+#include "player1.h"
 
 using namespace std;
 
@@ -86,23 +88,11 @@ public:
 };
 
 
-class Plansza
-{
-public:
-    void PustePole()
-    {
-        for (int i = 0; i < 15; i++)
-        {
-            cout << "\n";
-        }
-    }
-};
-
 int main()
 {
     Paletka p1 = {};
     Paletka2 p2 = {};
-    Plansza pl;
+    map m;
 
     while (true)
     {
@@ -113,7 +103,7 @@ int main()
         p1.ZmienKierunek('A', 'D');
         p1.Ruch();
         p1.Wyswietl();
-        pl.PustePole();
+        m.createMap();
         p2.ZmienKierunek2('VK_L', 'VK_R');
         p2.Ruch2();
         p2.Wyswietl2();
